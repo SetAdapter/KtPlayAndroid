@@ -6,7 +6,6 @@
     android:layout_height="wrap_content"
     android:background="@color/colorPinkPrimary"
     android:minHeight="?attr/actionBarSize"
-    android:popupTheme="@style/AppTheme.DrawerArrowToggle"
     app:theme="@style/ThemeOverlay.AppCompat.ActionBar">
 
 </android.support.v7.widget.Toolbar>

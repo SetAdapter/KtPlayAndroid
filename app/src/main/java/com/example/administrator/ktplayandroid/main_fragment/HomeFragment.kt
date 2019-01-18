@@ -22,6 +22,7 @@ import com.scwang.smartrefresh.layout.listener.OnRefreshLoadMoreListener
  * 首页
  * Created by Stefan on 2018/11/21.
  */
+
 class HomeFragment : BaseFragment(), OnRefreshLoadMoreListener {
      private lateinit var mAdapter: HomeAdapter
 
@@ -41,8 +42,6 @@ class HomeFragment : BaseFragment(), OnRefreshLoadMoreListener {
     //在onCreateView中获取控件会报空  只能在onViewCreated中通过View 获取  不知啥原因
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val data = listOf("", "", "")
-        getArticleListBean()
         val recyclerView = view.findViewById<RecyclerView>(R.id.rv_main)
         recyclerView.layoutManager = LinearLayoutManager(mContext)
         mAdapter = HomeAdapter(ArrayList())
@@ -53,6 +52,7 @@ class HomeFragment : BaseFragment(), OnRefreshLoadMoreListener {
     }
 
     override fun initData() {
+        getArticleListBean()
        // homeRecycleView = Companion.view?.findViewById(R.id.homeRecycleView) as RecyclerView;
     }
 

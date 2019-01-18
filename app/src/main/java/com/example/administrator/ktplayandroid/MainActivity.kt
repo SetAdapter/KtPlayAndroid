@@ -4,15 +4,18 @@ import android.graphics.Color
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
+import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.widget.Toolbar
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import com.ashokvarma.bottomnavigation.BottomNavigationBar
 import com.ashokvarma.bottomnavigation.BottomNavigationItem
 import com.example.administrator.ktplayandroid.main_fragment.*
 import com.example.administrator.mykotlin.T
 import com.example.handsomelibrary.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.custom_drawerlayout.*
 import kotlinx.android.synthetic.main.custom_toolbar.*
 
 /**
@@ -30,9 +33,24 @@ class MainActivity : BaseActivity(),BottomNavigationBar.OnTabSelectedListener {
         tl_custom.title = "WanAndroid"
         tl_custom.setTitleTextColor(Color.parseColor("#ffffff")) //设置标题颜色
         setSupportActionBar(tl_custom)
+        supportActionBar!!.setHomeButtonEnabled(true) //设置返回键可用
+        supportActionBar!!.setDisplayHomeAsUpEnabled(false)
         initBottomNavigation()
         initFragment()
         setDefaultFragment()
+
+       val mDrawerToggle = object : ActionBarDrawerToggle(this, mDrawerLayout, tl_custom, R.string.open, R.string.open) {
+            override fun onDrawerOpened(drawerView: View) {
+                super.onDrawerOpened(drawerView)
+
+            }
+
+            override fun onDrawerClosed(drawerView: View) {
+                super.onDrawerClosed(drawerView)
+            }
+        }
+        mDrawerToggle.syncState()//该方法会自动和actionBar关联, 将开关的图片显示在了action上，如果不设置，也可以有抽屉的效果，不过是默认的图标
+        mDrawerLayout.setDrawerListener(mDrawerToggle)
 
         //监听添加toolbar 菜单（就是搜索图标）
         tl_custom.setOnMenuItemClickListener(object : Toolbar.OnMenuItemClickListener{
