@@ -1,17 +1,15 @@
 package com.example.handsomelibrary.interceptor;
 
 
-
 import com.example.handsomelibrary.constant.SPKeys;
 import com.example.handsomelibrary.utils.SPUtils;
+import okhttp3.Interceptor;
+import okhttp3.Response;
 
 import java.io.IOException;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashSet;
-
-import okhttp3.Interceptor;
-import okhttp3.Response;
 
 import static java.util.Calendar.getInstance;
 

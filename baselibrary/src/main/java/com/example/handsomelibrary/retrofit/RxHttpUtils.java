@@ -2,15 +2,13 @@ package com.example.handsomelibrary.retrofit;
 
 import android.app.Application;
 import android.content.Context;
-
 import com.example.handsomelibrary.constant.SPKeys;
 import com.example.handsomelibrary.utils.SPUtils;
+import io.reactivex.disposables.Disposable;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
-
-import io.reactivex.disposables.Disposable;
 
 /**
  * 网络请求

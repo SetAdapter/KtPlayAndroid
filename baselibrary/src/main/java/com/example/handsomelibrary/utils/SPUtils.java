@@ -2,8 +2,6 @@ package com.example.handsomelibrary.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-
-
 import com.example.handsomelibrary.retrofit.RxHttpUtils;
 
 import java.lang.reflect.InvocationTargetException;

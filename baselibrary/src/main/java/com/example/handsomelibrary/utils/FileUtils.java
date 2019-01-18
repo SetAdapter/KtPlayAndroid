@@ -3,18 +3,9 @@ package com.example.handsomelibrary.utils;
 import android.os.Environment;
 import android.os.StatFs;
 import android.text.TextUtils;
-
 import com.example.handsomelibrary.application.BaseApplication;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.Reader;
+import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;

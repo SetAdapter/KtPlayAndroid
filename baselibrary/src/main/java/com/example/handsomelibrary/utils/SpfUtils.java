@@ -3,8 +3,8 @@ package com.example.handsomelibrary.utils;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
-
 import com.example.handsomelibrary.application.BaseApplication;
+
 import java.util.Map;
 
 /**

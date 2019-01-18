@@ -2,30 +2,11 @@ package com.example.handsomelibrary.api;
 
 
 import android.util.ArrayMap;
-
-import com.example.handsomelibrary.model.ArticleListBean;
-import com.example.handsomelibrary.model.BannerBean;
-import com.example.handsomelibrary.model.BaseBean;
-import com.example.handsomelibrary.model.KnowledgeBean;
-import com.example.handsomelibrary.model.KnowledgeChildBean;
-import com.example.handsomelibrary.model.LoginBean;
-import com.example.handsomelibrary.model.NavigationBean;
-import com.example.handsomelibrary.model.ProjectChildBean;
-import com.example.handsomelibrary.model.ProjectTreeBean;
-import com.example.handsomelibrary.model.PubNumChildBean;
-import com.example.handsomelibrary.model.SearchBean;
-import com.example.handsomelibrary.model.WxArticleBean;
+import com.example.handsomelibrary.model.*;
+import io.reactivex.Observable;
+import retrofit2.http.*;
 
 import java.util.List;
-
-import io.reactivex.Observable;
-import retrofit2.http.Body;
-import retrofit2.http.Field;
-import retrofit2.http.FormUrlEncoded;
-import retrofit2.http.GET;
-import retrofit2.http.POST;
-import retrofit2.http.Path;
-import retrofit2.http.Query;
 
 /**
  * 接口 API

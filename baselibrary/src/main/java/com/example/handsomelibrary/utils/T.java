@@ -1,7 +1,6 @@
 package com.example.handsomelibrary.utils;
 
 import android.widget.Toast;
-
 import com.example.handsomelibrary.application.BaseApplication;
 
 /**

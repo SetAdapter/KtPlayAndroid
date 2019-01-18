@@ -3,11 +3,16 @@ package com.example.handsomelibrary.retrofit;
 import android.os.Environment;
 import android.text.TextUtils;
 import android.util.Log;
-
 import com.example.handsomelibrary.interceptor.AddCookiesInterceptor;
 import com.example.handsomelibrary.interceptor.CacheInterceptor;
 import com.example.handsomelibrary.interceptor.HeaderInterceptor;
 import com.example.handsomelibrary.interceptor.ReceivedCookiesInterceptor;
+import okhttp3.Cache;
+import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
+import retrofit2.CallAdapter;
+import retrofit2.Converter;
+import retrofit2.Retrofit;
 
 import java.io.File;
 import java.io.InputStream;
@@ -16,13 +21,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
-
-import okhttp3.Cache;
-import okhttp3.OkHttpClient;
-import okhttp3.logging.HttpLoggingInterceptor;
-import retrofit2.CallAdapter;
-import retrofit2.Converter;
-import retrofit2.Retrofit;
 
 /**
  * Created by allen on 2017/6/22.

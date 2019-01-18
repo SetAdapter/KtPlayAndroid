@@ -7,11 +7,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.kaopiz.kprogresshud.KProgressHUD;
-
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
+import com.kaopiz.kprogresshud.KProgressHUD;
 
 /**
  * Fragment 基类

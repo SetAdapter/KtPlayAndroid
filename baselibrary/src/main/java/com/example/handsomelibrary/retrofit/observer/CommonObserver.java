@@ -2,10 +2,7 @@ package com.example.handsomelibrary.retrofit.observer;
 
 
 import android.app.Dialog;
-
-
 import com.example.handsomelibrary.retrofit.RxHttpUtils;
-
 import io.reactivex.disposables.Disposable;
 
 /**

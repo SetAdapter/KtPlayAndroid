@@ -1,16 +1,14 @@
 package com.example.handsomelibrary.interceptor;
 
 import android.util.Log;
-
 import com.example.handsomelibrary.constant.SPKeys;
 import com.example.handsomelibrary.utils.SPUtils;
-
-import java.io.IOException;
-import java.util.HashSet;
-
 import okhttp3.Interceptor;
 import okhttp3.Request;
 import okhttp3.Response;
+
+import java.io.IOException;
+import java.util.HashSet;
 
 /**
  * 请求头里边添加cookie

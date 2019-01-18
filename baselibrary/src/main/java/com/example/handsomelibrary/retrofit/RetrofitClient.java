@@ -2,11 +2,12 @@ package com.example.handsomelibrary.retrofit;
 
 import com.example.handsomelibrary.api.ApiService;
 import com.example.handsomelibrary.gson.GsonClass;
-
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
+
+import static com.example.handsomelibrary.api.ApiService.BASE_URL;
 
 /**
  * RetrofitClient工具类
@@ -30,7 +31,7 @@ public class RetrofitClient {
 //                .client(build)
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create(GsonClass.buildGson()))
-                .baseUrl(ApiService.BASE_URL);
+                .baseUrl(BASE_URL);
     }
 
     public static RetrofitClient getInstance() {

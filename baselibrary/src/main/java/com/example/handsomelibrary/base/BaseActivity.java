@@ -9,12 +9,10 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
-
-import com.example.handsomelibrary.utils.NetWorkChangReceiver;
-import com.kaopiz.kprogresshud.KProgressHUD;
-
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
+import com.example.handsomelibrary.utils.NetWorkChangReceiver;
+import com.kaopiz.kprogresshud.KProgressHUD;
 
 /**
  * Activity 基类
