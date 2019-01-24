@@ -44,7 +44,9 @@ dependencies {
     //主页底部Tab
     implementation 'com.ashokvarma.android:bottom-navigation-bar:2.0.4'
     //首页 banner
-    implementation 'com.bigkoo:convenientbanner:2.0.5'
+    implementation 'com.youth.banner:banner:1.4.10'  //最新版本
 
     implementation project(':baselibrary')
+    //黄油刀 app依赖容易漏掉
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 }
