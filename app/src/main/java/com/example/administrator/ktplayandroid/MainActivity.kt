@@ -60,7 +60,6 @@ class MainActivity : BaseActivity(),BottomNavigationBar.OnTabSelectedListener {
                 }
                 return true
             }
-
         })
     }
 
@@ -148,9 +147,4 @@ class MainActivity : BaseActivity(),BottomNavigationBar.OnTabSelectedListener {
         }
 
     }
-
-
-
-
-
 }

@@ -22,11 +22,9 @@ import com.example.handsomelibrary.utils.L
 import com.scwang.smartrefresh.layout.api.RefreshLayout
 import com.scwang.smartrefresh.layout.constant.RefreshState
 import com.scwang.smartrefresh.layout.listener.OnRefreshLoadMoreListener
+import com.youth.banner.BannerConfig
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.home_banner.*
-import com.youth.banner.BannerConfig
-import com.youth.banner.Transformer.DepthPage
-import com.youth.banner.listener.OnBannerListener
 
 /**
  * 首页
@@ -54,7 +52,7 @@ class HomeFragment : BaseFragment(), OnRefreshLoadMoreListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val recyclerView = view.findViewById<RecyclerView>(R.id.rv_main)
-        recyclerView.layoutManager = LinearLayoutManager(mContext) as RecyclerView.LayoutManager?
+        recyclerView.layoutManager = LinearLayoutManager(mContext)
         mAdapter = HomeAdapter(ArrayList())
         recyclerView.adapter = mAdapter
         refreshLayout.setOnRefreshLoadMoreListener(this)//监听刷新
@@ -73,7 +71,6 @@ class HomeFragment : BaseFragment(), OnRefreshLoadMoreListener {
     override fun initData() {
         getBanner()
         getArticleListBean(mPageNo)
-        // homeRecycleView = Companion.view?.findViewById(R.id.homeRecycleView) as RecyclerView;
     }
 
     //头部banner设置
@@ -129,7 +126,7 @@ class HomeFragment : BaseFragment(), OnRefreshLoadMoreListener {
                 override fun onSuccess(t: ArticleListBean) {
                     if (t.datas!!.isNotEmpty()) {
                         when {
-                            refreshLayout.state == RefreshState.Refreshing -> {
+                            refreshLayout.state == RefreshState.Refreshing -> {1
                                 mAdapter.setNewData(t.datas)
                                 refreshLayout.finishRefresh()
                             }//正在加载

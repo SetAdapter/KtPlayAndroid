@@ -61,7 +61,7 @@ class KnowledgeFragment : BaseFragment(), OnRefreshLoadMoreListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setData()
+       // setData()
         val rv_knowList=view.findViewById<RecyclerView>(R.id.rv_knowList)
         rv_knowList.layoutManager = LinearLayoutManager(mContext)
         mAdapter= KnowledgeAdapter(ArrayList())
@@ -74,9 +74,9 @@ class KnowledgeFragment : BaseFragment(), OnRefreshLoadMoreListener {
     override fun onRefresh(refreshLayout: RefreshLayout) {
     }
 
-    private fun setData(){
-        list= listOf("","","")
-    }
+//    private fun setData(){
+//        list= listOf("","","")
+//    }
 
 }
 
