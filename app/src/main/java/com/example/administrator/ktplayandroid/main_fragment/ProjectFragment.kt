@@ -2,6 +2,7 @@ package com.example.administrator.ktplayandroid.main_fragment
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.view.View
 import com.example.administrator.ktplayandroid.R
 import com.example.handsomelibrary.base.BaseFragment
 import com.scwang.smartrefresh.layout.api.RefreshLayout
@@ -26,7 +27,7 @@ class ProjectFragment : BaseFragment(), OnRefreshLoadMoreListener {
 
     override fun getLayoutID(): Int = R.layout.fragment_project
 
-    override fun initData() {
+    override fun initData(view: View?) {
 
     }
 

@@ -45,13 +45,15 @@ class PublicNumberFragment : BaseFragment(), ViewPager.OnPageChangeListener {
 
     override fun getLayoutID(): Int = R.layout.fragment_public_number
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        getWxArticle(view)
-    }
+//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+//        super.onViewCreated(view, savedInstanceState)
+//
+//    }
 
-    override fun initData() {
-
+    override fun initData(view: View?) {
+        view?.let {
+            getWxArticle(view)
+        }
     }
 
     private fun getWxArticle(view: View) {

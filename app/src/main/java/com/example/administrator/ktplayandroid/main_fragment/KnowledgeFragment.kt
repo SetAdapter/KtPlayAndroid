@@ -39,7 +39,13 @@ class KnowledgeFragment : BaseFragment(), OnRefreshLoadMoreListener {
 
     override fun getLayoutID(): Int = R.layout.fragment_knowledge
 
-    override fun initData() {
+    override fun initData(view: View?) {
+        view?.let {
+            val rv_knowList=view.findViewById<RecyclerView>(R.id.rv_knowList)
+            rv_knowList.layoutManager = LinearLayoutManager(mContext)
+            mAdapter= KnowledgeAdapter(ArrayList())
+            rv_knowList.adapter=mAdapter
+        }
         getKnowledgeTree()
     }
 
@@ -57,15 +63,6 @@ class KnowledgeFragment : BaseFragment(), OnRefreshLoadMoreListener {
                 override fun onError(errorMsg: String?) {
                 }
             })
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-       // setData()
-        val rv_knowList=view.findViewById<RecyclerView>(R.id.rv_knowList)
-        rv_knowList.layoutManager = LinearLayoutManager(mContext)
-        mAdapter= KnowledgeAdapter(ArrayList())
-        rv_knowList.adapter=mAdapter
     }
 
     override fun onLoadMore(refreshLayout: RefreshLayout) {

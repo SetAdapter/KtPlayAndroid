@@ -68,7 +68,7 @@ class HomeFragment : BaseFragment(), OnRefreshLoadMoreListener {
                 }
     }
 
-    override fun initData() {
+    override fun initData(view: View?) {
         getBanner()
         getArticleListBean(mPageNo)
     }

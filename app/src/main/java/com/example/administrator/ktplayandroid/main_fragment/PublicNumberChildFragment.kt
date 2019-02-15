@@ -41,16 +41,16 @@ class PublicNumberChildFragment : BaseFragment() {
 
     override fun getLayoutID(): Int = R.layout.fragment_public_num_child
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+//        super.onViewCreated(view, savedInstanceState)
+//
+//    }
+
+    override fun initData(view: View?) {
         rv_pubNumChildList.layoutManager=LinearLayoutManager(mContext)
         mAdapter= PubNumChildAdapter(ArrayList())
         rv_pubNumChildList.adapter=mAdapter
         getWxArticleList(408, mPage)
-    }
-
-    override fun initData() {
-
     }
 
     private fun getWxArticleList(id: Int, page: Int) {

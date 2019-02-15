@@ -39,7 +39,6 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
             unbinder= ButterKnife.bind(this,mContentView);
         }
         initView();
-        initData();
         return mContentView;
     }
 
@@ -52,6 +51,7 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         isViewCreated = true;
+        initData(view);
     }
 
     @Override
@@ -116,7 +116,7 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
     /**
      * 设置数据
      */
-    protected abstract void initData();
+    protected abstract void initData(View view);
 
     /**
      * 设置懒加载数据
